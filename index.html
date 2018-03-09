@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html data-use-rem="750">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>小小心愿</title>
+    <link rel="stylesheet" href="./css/main.css">  
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/rotaryDraw.js"></script>
+</head>
+<body>
+<script>
+	!function(win){var doc=win.document,html=doc.documentElement,option=html.getAttribute("data-use-rem");if(null!==option){var baseWidth="NaN"==parseInt(option).toString()?750:parseInt(option),grids=baseWidth/100,clientWidth=html.clientWidth||320;html.style.fontSize=clientWidth/grids+"px";var testDom=document.createElement("div"),testDomWidth=0,adjustRatio=0;testDom.style.cssText="height:0;width:1rem;",doc.body.appendChild(testDom);var calcTestDom=function(){if(testDomWidth=testDom.offsetWidth,testDomWidth!==Math.round(clientWidth/grids)){adjustRatio=clientWidth/grids/testDomWidth;var reCalcRem=clientWidth*adjustRatio/grids;html.style.fontSize=reCalcRem+"px"}else doc.body.removeChild(testDom)};setTimeout(calcTestDom,20);var reCalc=function(){var newCW=html.clientWidth;newCW!==clientWidth&&(clientWidth=newCW,html.style.fontSize=newCW*(adjustRatio?adjustRatio:1)/grids+"px")};if(reCalc(),doc.addEventListener){var resizeEvt="orientationchange"in win?"orientationchange":"resize";win.addEventListener(resizeEvt,reCalc,!1),doc.addEventListener("DOMContentLoaded",reCalc,!1)}}}(window);
+</script>
+<div class="container">
+	<div class="act-mod">
+		<img src="./img/bg_01.jpg" />
+	</div>
+	<div class="act-mod">
+		<img src="./img/bg_02.jpg" />
+		<div class="block save-bell">
+			
+			<div class="gift">
+				<div class="thumb">
+					<img src="./img/g.png">
+				</div>
+			</div>
+			<p>奖品价值<span>16元-2999元</span>，心愿礼包，仅需<span>15元</span></p>
+			<div class="btn-group">
+				<a href="javascript:void(0)" class="btn-normal">立即购买</a>
+			</div>
+		</div>
+	</div>
+	<div class="act-mod">
+		<img src="./img/bg_03.jpg" />
+		<div class="block exchange">
+			<div class="top">
+				<p class="tip">一张心愿卡抽1次，一人最多3次，礼物价值<span>16元-2999元</span></p>
+				<a href="#" class="btn-rules">活动规则</a>
+			</div>
+			<div class="jiang">
+				<ul>
+					<li class="action"><p>100****164抽到QQ飞车鼠标垫</p></li>
+					<li><p>927****38抽到歪瓜出品
+创意屁股书签</p></li>
+					<li><p>334****474抽到正义联盟
+充电宝套装
+</p></li>
+					<li><p>519****52抽到全职高手
+Q版纸巾</p></li>
+					<li><p>793****38抽到星球大战
+智能机器人</p></li>
+					<li><p>259****871抽到哆啦A梦纪念公仔</p></li>
+					<li><p>157****474抽到秦时明月
+迷你兵器钥匙扣</p></li>
+					<li><p>867****25抽到变形金刚笔记本
+（2本）</p></li>
+				</ul>
+			</div>
+			
+			<!--转盘-->
+			<div class="da">
+				<div class="zhuangpan">
+					<!--闪灯-->
+					<div class="d1"></div>
+					<div class="d2"></div>
+				</div>
+				<div class="prizebtn"><img src="img/choujiangbtn1.png"/></div>
+				<div class="prizebtn1">
+					<img src="img/btn01.png"/>
+					<!--<span>3</span>-->
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="act-mod">
+		<img src="./img/bg_04.jpg" />
+		<div class="block my-gifts">
+			
+			<dl>
+				<dd>
+					<a href="#"><img src="img/gbg-1.png"/></a>
+					<!--<a href="#" class="aimg"><img src="img/1-1.png"/></a>
+						<p>
+							<a href="#" class="ab">秦时明月迷你兵器钥匙扣</a>
+						</p>-->
+				</dd>
+				<dd>
+					<a href="#"><img src="img/gbg-2.png"/></a>
+				<!--<a href="#" class="aimg"><img src="img/1-2.png"/></a>
+						<p>
+							<a href="#" class="ab">变形金刚笔记本（2本）</a>-->
+				</dd>
+				<dd>
+					<a href="#"><img src="img/gbg-3.png"/></a>
+					<!--<a href="#" class="aimg"><img src="img/1-3.png"/>
+						</a>
+						<p>
+						<a href="#" class="ab">	QQ飞车鼠标垫</a>
+						</p>-->
+				</dd>
+
+			</dl>
+		</div>
+	</div>
+</div>
+<!--底部导航-->
+<div class="footer-nav">
+	<p><a href="#">商城首页</a>
+	<a href="#" class="zhong active">我的优惠券</a>
+	<a href="#"class="right">我的订单</a>
+	</p>
+	
+</div>
+
+<script type="text/javascript">
+			$(function(){
+				//闪灯效果
+				var timer=setInterval(function(){
+					
+					$(".d2").toggle();
+			        $(".d1").toggle();
+				},300);
+				//底部导航效果
+				$(".footer-nav p a").click(function(){
+					$(this).addClass("active").siblings().removeClass("active");
+				})
+				//抽奖定义
+				function callbackA(ind){
+					alert("回调"+ind);
+				};
+				var newdraw =new turntableDraw('.prizebtn',{
+							share:8,
+							speed:"3s",
+							velocityCurve:"ease",
+							weeks:6,
+							callback:function(num)
+							{
+								callbackA(num);
+							},
+						});
+						//抽奖事件
+				$(".prizebtn1").click(function(event) {
+						newdraw.goto(parseInt(Math.random()*8)+1);
+						});
+						//中奖号码
+						var shu=0;
+						var timer1=setInterval(function(){
+					$(".jiang ul li").eq(shu).fadeOut();
+					if(shu<$(".jiang ul li").length-1){
+						shu++;
+					}else{
+						shu=0;
+					}
+					console.log(shu);
+					$(".jiang ul li").eq(shu).slideDown(1000);
+						},2000);
+						//弹窗
+						$(".huodong a").click(function(){
+							$(".alert").show();
+							$(".huip").show();
+						});
+						//关闭
+						$(".close a").click(function(){
+							$(".alert").hide();
+							$(".huip").hide();
+						});
+			})
+		</script>
+
+</body>
+</html>
