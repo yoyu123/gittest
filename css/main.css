@@ -186,7 +186,7 @@ width: 100%;
 .more p{margin:0.15rem 0;}
 .more .act{width:6.65rem;margin:auto;padding:0.35rem 0 0 0 ;}
 
-.footer-nav{height:0.9rem;position:fixed;text-align:center;bottom:0;padding-top:0.43rem;left:0rem;right:0;z-index:99;font-size:0;line-height:0.36rem;width:100%;
+.footer-nav{height:0.9rem;position:fixed;text-align:center;bottom:0;padding-top:0.42rem;left:0rem;right:0;z-index:99;font-size:0;line-height:0.36rem;width:100%;
 background: url("../img/footer_nav.png") no-repeat center top;background-size:100% auto;
 	display: -webkit-box!important;
 	display: -webkit-flex!important;
