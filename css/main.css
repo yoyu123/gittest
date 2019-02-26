@@ -193,7 +193,7 @@ background: url("../img/footer_nav.png") no-repeat center top;background-size:10
 	display: -ms-flexbox!important;
 	display: flex!important
 }
-.footer-nav a{float:left;display:inline-block;height:0.77rem;line-height:0.77rem;font-weight:bold;color:#fff7f6;font-size:0.26rem;
+.footer-nav a{float:left;display:inline-block;height:0.78rem;line-height:0.78rem;font-weight:bold;color:#fff7f6;font-size:0.26rem;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	-ms-flex: 1;
